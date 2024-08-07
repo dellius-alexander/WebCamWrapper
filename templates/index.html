@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webcam Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #webcam-container {
+            text-align: center;
+        }
+
+        #webcams {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="webcam-container">
+            <h1>Webcam Server</h1>
+            <div id="webcams">
+                    <img src="{{ url_for('get_webcam', cam_id=0) }}" alt="Webcam 1">
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
